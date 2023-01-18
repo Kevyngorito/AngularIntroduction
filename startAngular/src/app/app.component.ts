@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Introducao-Angular';
+  title = 'startAngular';
+  
+  items = [
+    "An item",
+    "A second item",
+    "A third item",
+    "A fourth item",
+    "And a fifith one"
+  ];
 }

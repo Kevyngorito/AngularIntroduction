@@ -8,4 +8,7 @@ Array Splice (remover item) <br>
 Array Push (adicionar item) <br>
 Condição if para controle de entrada <br>
 Data binding <br>
-Diretivas de ngFor e ngModul <br>
+Diretivas de ngFor e ngModul <br><br>
+
+![image](https://user-images.githubusercontent.com/58333273/213344303-72ca33eb-9853-4eec-ad64-eacd419d9dd4.png)
+

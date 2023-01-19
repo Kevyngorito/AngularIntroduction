@@ -8,13 +8,32 @@
         <button (click)="insertUserAction()" class="btn btn-success mt-2">Insert</button>
 
       </div>
-      <div>
-        <ul>
-          <li *ngFor="let names of arrNames"> {{ names }}
+      
 
-          </li>
-        </ul>
-      </div>
-    </div>
+    <table class="table table-ligth mt-3">
+      <thead class="thead-ligth">
+        <tr>
+          <th>N°</th>
+          <th>Names</th>
+          <th>Delete</th>
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let names of arrNames; index as userno">
+          <td>
+            {{ userno + 1 }}
+          </td>
+          <td>
+            {{ names }}
+          </td>
+          <td>
+            <button (click)="removeName(names)"class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
   </div>
 

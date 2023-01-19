@@ -14,8 +14,19 @@ export class AppComponent {
   public arrNames = ['Marco', 'Peter', 'Pedro', 'Juliana', 'Felipe'];
 
   insertUserAction(){
-    this.arrNames.push(this.userInputs);
-    this.userInputs = "";
+    if(this.userInputs.length > 0){
+      this.arrNames.push(this.userInputs);
+      this.userInputs = "";
+    }
+    else alert ("Please, fill the blank")
+  }
+
+  /*removeName(deleteme:any){
+    this.arrNames.splice(deleteme,1)
+  } */
+
+  removeName(names:string){
+    this.arrNames.splice( this.arrNames.indexOf(names), 1)
   }
 
 }

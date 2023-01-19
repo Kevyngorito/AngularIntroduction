@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+ 
 
 @Component({
   selector: 'app-root',
@@ -6,13 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'startAngular';
   
-  items = [
-    "An item",
-    "A second item",
-    "A third item",
-    "A fourth item",
-    "And a fifith one"
-  ];
+  UserName:string = "Enter UserName"
+
+  public userInputs = "";
+  public arrNames = ['Marco', 'Peter', 'Pedro', 'Juliana', 'Felipe'];
+
+  insertUserAction(){
+    this.arrNames.push(this.userInputs);
+    this.userInputs = "";
+  }
+
 }

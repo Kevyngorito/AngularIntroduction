@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <ul *ngFor="let item of items">
-    <li class="list-group-item">
-      Itens: {{ item }}
-    </li>
-  </ul>
 
-  <div class="form-floating mb-3" id="controleForm">
-    <input type="email" class="form-control" id="floatingInput" placeholder="Username">
-    <button type="button" class="btn btn-success">Adicionar</button>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12">
+
+        
+        <input type="text" [(ngModel)]="userInputs" class="form-control"  [placeholder]="UserName">
+        <button (click)="insertUserAction()" class="btn btn-success mt-2">Insert</button>
+
+      </div>
+      <div>
+        <ul>
+          <li *ngFor="let names of arrNames"> {{ names }}
+
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-</body>
-</html>

@@ -1,39 +1,57 @@
 
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-12">
 
-        
-        <input type="text" [(ngModel)]="userInputs" class="form-control"  [placeholder]="UserName">
-        <button (click)="insertUserAction()" class="btn btn-success mt-2">Insert</button>
 
-      </div>
+
+
+  <div align = "center" class="container mt-5 center">
+    
+      <div class="col-md-8">
+        <div class="card">
+            <div align = "center" class="lineInput">
+              <label> Name</label>
+              <input type="text" [(ngModel)]="nameInput" class="form-control"  [placeholder]="UserName">
+            </div>
+        </div>  
+          <div align = "center"  class="lineInput">
+            <label> Age</label>
+            <input type="text" [(ngModel)]="ageInput" class="form-control"  [placeholder]= 0>
+          </div>
+
+          <button (click)="insertUserAction()" class="btn btn-success mt-2">Insert</button>
+       
+    </div>
       
 
-    <table class="table table-ligth mt-3">
+    <table border = 1 align="center" class="table table-ligth mt-3">
       <thead class="thead-ligth">
         <tr>
           <th>N°</th>
-          <th>Names</th>
+          <th>Name</th>
+          <th>Age</th>
           <th>Delete</th>
+
 
         </tr>
       </thead>
 
       <tbody>
-        <tr *ngFor="let names of arrNames; index as userno">
+        <tr *ngFor="let info of information index as userno">
           <td>
             {{ userno + 1 }}
           </td>
           <td>
-            {{ names }}
+            {{ info.name }}
           </td>
           <td>
-            <button (click)="removeName(names)"class="btn btn-danger">Delete</button>
+            {{ info.age }}
+          </td>
+          <td>
+            <button (click)="removeName(info.name)"class="btn btn-danger">Delete</button>
           </td>
         </tr>
       </tbody>
 
     </table>
   </div>
+
 

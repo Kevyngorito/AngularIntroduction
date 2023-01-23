@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { filter } from 'rxjs';
  
 
 @Component({
@@ -10,23 +11,43 @@ export class AppComponent {
   
   UserName:string = "Enter UserName"
 
-  public userInputs = "";
-  public arrNames = ['Marco', 'Peter', 'Pedro', 'Juliana', 'Felipe'];
+ 
+  public ageInput:Number = 0;
+  //public arrNames = ['Marco', 'Peter', 'Pedro', 'Juliana', 'Felipe'];
+  public information: any [] = [
+    {name: "João", age: 10},
+    {name: "Paulo", age: 15},
+    {name: "Maria", age: 0},
+    {name: "Carlos", age: 20}
+  ]
+  public nameInput:string = "";
+
+  public infoName: any [] = []
+  public infoAge: number [] = []
+
 
   insertUserAction(){
-    if(this.userInputs.length > 0){
-      this.arrNames.push(this.userInputs);
-      this.userInputs = "";
-    }
-    else alert ("Please, fill the blank")
-  }
+   
+    if(this.nameInput.length > 0){
+     // this.information.push(this.nameInput);
 
+     
+      
+     this.information.push(this.UserName)
+     
+     
+     
+    }
+  
+    else alert("Fill the blank")
+
+  }
   /*removeName(deleteme:any){
     this.arrNames.splice(deleteme,1)
   } */
-
+  
   removeName(names:string){
-    this.arrNames.splice( this.arrNames.indexOf(names), 1)
+    this.information.splice( this.information.indexOf(names), 1)
   }
 
 }

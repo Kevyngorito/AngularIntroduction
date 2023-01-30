@@ -33,7 +33,7 @@ export class AppComponent {
 
      
       
-     this.information.push(this.UserName)
+     this.information.push(this.nameInput)
      
      
      

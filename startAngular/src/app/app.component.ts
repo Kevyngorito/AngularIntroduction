@@ -18,45 +18,43 @@ export class AppComponent {
 
   
  
-  public ageInput:Number = 0;
+  public ageInput: number = 0;
   //public arrNames = ['Marco', 'Peter', 'Pedro', 'Juliana', 'Felipe'];
 
   
- 
-    person = [
+    
+
+
+    personList = [
     {name: 'João', age: 10},
     {name: 'Paulo', age: 15},
     {name: 'Maria', age: 0},
     {name: 'Carlos', age: 20}
   ]
   
-
-   nameInput: any = "";
+  //Inicia a variável nameInput para fazer conexão com o html do que o usuário inserir
+   nameInput: string = "";
 
  
 
 
   insertUserAction(){
-   
-    let person: object = []
 
-    person = [
-      {name: 'João', age: 10},
-      {name: 'Paulo', age: 15},
-      {name: 'Maria', age: 0},
-      {name: 'Carlos', age: 20}
-    ]
-    
-     // this.information.push(this.nameInput);
+    //variável dentro de uma classe vira um ATRIBUTO DA CLASSE
+    //Criando uma variável person para "absorver" o objeto
+    const person = 
+      {
+      name: this.nameInput, //atribuição de valor a chave name, capturando o input do usuário na parte do html
+      age: this.ageInput //atribuição de valor a chave age, capturando o input do usuário na parte do html
+    }
 
-    this.person.push(this.nameInput)     
-     
-      
-     
-     
-     
-     
+    //Adicionando elemento na última posição da lista com o push e tendo como parâmetro a variável person
+    //Que comporta o objeto composto por name e age
+    this.personList.push(person)     
     
+    //Zera o estado dos campos para "vazio"
+    this.nameInput = "";
+    this.ageInput = 0;
   
     
 
@@ -66,7 +64,7 @@ export class AppComponent {
   } */
   
   removeName(names:any){
-    this.person.splice(this.person.indexOf(names), 1)
+    this.personList.splice(this.personList.indexOf(names), 1)
   }
 
 }

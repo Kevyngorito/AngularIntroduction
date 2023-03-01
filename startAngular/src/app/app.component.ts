@@ -48,9 +48,11 @@ export class AppComponent {
       age: this.ageInput //atribuição de valor a chave age, capturando o input do usuário na parte do html
     }
 
+
     //Adicionando elemento na última posição da lista com o push e tendo como parâmetro a variável person
     //Que comporta o objeto composto por name e age
     this.personList.push(person)     
+
     
     //Zera o estado dos campos para "vazio"
     this.nameInput = "";

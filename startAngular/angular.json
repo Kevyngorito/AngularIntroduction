@@ -1,11 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-<<<<<<< HEAD
-    "analytics": "307f5659-f5c5-4107-9b49-3dcf651cc68e"
-=======
     "analytics": "3e75a798-cfe2-4f46-8016-8f70051eeace"
->>>>>>> 630f7392caf22219b51ad58f808cd70e684a778a
   },
   "version": 1,
   "newProjectRoot": "projects",
@@ -115,4 +111,4 @@
     }
   },
   "defaultProject": "startAngular"
-}
+  }

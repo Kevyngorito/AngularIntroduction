@@ -21,7 +21,7 @@ export class AppComponent {
   public ageInput: number = 0;
   //public arrNames = ['Marco', 'Peter', 'Pedro', 'Juliana', 'Felipe'];
 
-  
+
     
 
 
@@ -35,6 +35,7 @@ export class AppComponent {
   //Inicia a variável nameInput para fazer conexão com o html do que o usuário inserir
    nameInput: string = "";
 
+   
  
 
 
@@ -53,13 +54,19 @@ export class AppComponent {
     //Que comporta o objeto composto por name e age
     this.personList.push(person)     
 
+    this.resetFields();
+
     
-    //Zera o estado dos campos para "vazio"
-    this.nameInput = "";
-    this.ageInput = 0;
+   
   
     
 
+  }
+
+  resetFields() {
+     //Zera o estado dos campos para "vazio"
+     this.nameInput = "";
+     this.ageInput = 0;
   }
   /*removeName(deleteme:any){
     this.arrNames.splice(deleteme,1)

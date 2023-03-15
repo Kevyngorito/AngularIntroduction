@@ -34,6 +34,7 @@ export class AppComponent {
   
   //Inicia a variável nameInput para fazer conexão com o html do que o usuário inserir
    nameInput: string = "";
+   
 
    
  
@@ -49,10 +50,11 @@ export class AppComponent {
       age: this.ageInput //atribuição de valor a chave age, capturando o input do usuário na parte do html
     }
 
+    
 
     //Adicionando elemento na última posição da lista com o push e tendo como parâmetro a variável person
     //Que comporta o objeto composto por name e age
-    this.personList.push(person)     
+    this.personList.push(person);
 
     this.resetFields();
 
@@ -77,3 +79,8 @@ export class AppComponent {
   }
 
 }
+
+/* 
+  Ao inserir qualquer separador no campo name (,-.) popular os nomes na coluna nome e repetir a mesma idade na coluna age
+
+*/
